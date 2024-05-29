@@ -277,14 +277,14 @@ if (false) {
 <p><strong>解压在服务器上你所指定的位置</strong></p>
 <hr>
 <h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><p><strong>用宝塔面板，安装PHP(选择7.x版本)和Nginx</strong></p>
-<p><img src="/local_pic/D/2024-05-09-%E6%90%AD%E5%BB%BAOneIndex%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/image-20240509172916779.png" alt="image-20240509172916779"></p>
+<p><img src="/local_pic/D/2024-05-09-搭建OneIndex个人网盘/image-20240509172916779.png" alt="image-20240509172916779"></p>
 <hr>
 <h2 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h2><p><strong>选择网站→PHP项目→添加站点</strong></p>
 <p><strong>根目录就是你解压的目录，记得指定你安装的php版本</strong></p>
 <p><strong>部署好后使用指定的域名进入网站</strong></p>
-<p><img src="/local_pic/D/2024-05-09-%E6%90%AD%E5%BB%BAOneIndex%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/image-20240509210224137.png" alt="image-20240509210224137"></p>
+<p><img src="/local_pic/D/2024-05-09-搭建OneIndex个人网盘/image-20240509210224137.png" alt="image-20240509210224137"></p>
 <p><strong>点击下一步后出现页面</strong></p>
-<p><img src="/local_pic/D/2024-05-09-%E6%90%AD%E5%BB%BAOneIndex%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/image-20240509210259406.png" alt="image-20240509210259406"></p>
+<p><img src="/local_pic/D/2024-05-09-搭建OneIndex个人网盘/image-20240509210259406.png" alt="image-20240509210259406"></p>
 <p><strong>我们需要三个参数：</strong></p>
 <ul>
 <li>client_secret：应用机密，即：<strong>客户端密码</strong>。</li>
@@ -299,10 +299,10 @@ if (false) {
 <li>受支持的帐户类型：如图：<strong>选择任何组织目录的账号和个人</strong></li>
 <li>重定向 URI：这里填入我建立的API： <code>https://tool.mintimate.cn/oneindexM/</code></li>
 </ul>
-<p><img src="/local_pic/D/2024-05-09-%E6%90%AD%E5%BB%BAOneIndex%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/image-20240509210657280.png" alt="image-20240509210657280"></p>
+<p><img src="/local_pic/D/2024-05-09-搭建OneIndex个人网盘/image-20240509210657280.png" alt="image-20240509210657280"></p>
 <p><strong>填写完点击注册即可</strong></p>
 <hr>
-<h2 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h2><p><strong>在获取应用机密前，我们需要设置权限，点击：<code>API权限</code>-<code>Microsoft Graph</code>:</strong><br><img src="/local_pic/D/2024-05-09-%E6%90%AD%E5%BB%BAOneIndex%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/image-20240509210922778.png" alt="image-20240509210922778"></p>
+<h2 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h2><p><strong>在获取应用机密前，我们需要设置权限，点击：<code>API权限</code>-<code>Microsoft Graph</code>:</strong><br><img src="/local_pic/D/2024-05-09-搭建OneIndex个人网盘/image-20240509210922778.png" alt="image-20240509210922778"></p>
 <p><strong>依此勾选：</strong></p>
 <ul>
 <li><strong>offline_access</strong></li>
@@ -310,20 +310,20 @@ if (false) {
 <li><strong>Files.Read.All</strong></li>
 </ul>
 <p><strong>最后更新权限即可：</strong></p>
-<p><img src="/local_pic/D/2024-05-09-%E6%90%AD%E5%BB%BAOneIndex%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/image-20240509211056249.png" alt="image-20240509211056249"></p>
+<p><img src="/local_pic/D/2024-05-09-搭建OneIndex个人网盘/image-20240509211056249.png" alt="image-20240509211056249"></p>
 <p><strong>到此，设置权限结束，接下来，我们可以去获取机密了。</strong></p>
 <hr>
-<h2 id="获取应用ID"><a href="#获取应用ID" class="headerlink" title="获取应用ID"></a>获取应用ID</h2><p><strong>应用ID很好获取，注册了后，即可获得：</strong><br><img src="/local_pic/D/2024-05-09-%E6%90%AD%E5%BB%BAOneIndex%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/image-20240509211607575.png" alt="image-20240509211607575"></p>
+<h2 id="获取应用ID"><a href="#获取应用ID" class="headerlink" title="获取应用ID"></a>获取应用ID</h2><p><strong>应用ID很好获取，注册了后，即可获得：</strong><br><img src="/local_pic/D/2024-05-09-搭建OneIndex个人网盘/image-20240509211607575.png" alt="image-20240509211607575"></p>
 <hr>
 <h2 id="获取机密"><a href="#获取机密" class="headerlink" title="获取机密"></a>获取机密</h2><p><strong>最后，我们可以获取应用机密（密钥）了，点击：<code>证书和密码</code>-<code>新建客户端密码</code>：</strong></p>
-<p><img src="/local_pic/D/2024-05-09-%E6%90%AD%E5%BB%BAOneIndex%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/image-20240509211219452.png" alt="image-20240509211219452"></p>
+<p><img src="/local_pic/D/2024-05-09-搭建OneIndex个人网盘/image-20240509211219452.png" alt="image-20240509211219452"></p>
 <p><strong>按提示设置即可得到密钥</strong></p>
 <p><strong>回到OneIndex设置并下一步，然后绑定账号，提示安装成功</strong></p>
 <hr>
 <h2 id="管理后台"><a href="#管理后台" class="headerlink" title="管理后台"></a>管理后台</h2><p><strong>首先更改密码</strong></p>
-<p><img src="/local_pic/D/2024-05-09-%E6%90%AD%E5%BB%BAOneIndex%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/image-20240509212221465.png" alt="image-20240509212221465"></p>
+<p><img src="/local_pic/D/2024-05-09-搭建OneIndex个人网盘/image-20240509212221465.png" alt="image-20240509212221465"></p>
 <p><strong>设置起始目录，这样，就等于将根目录下Share文件夹以及Share文件夹下的子文件夹以及文件划给OneIndex，其他文件夹OneIndex依旧不可读，也就不会公开。避免隐私泄露。</strong></p>
-<p><img src="/local_pic/D/2024-05-09-%E6%90%AD%E5%BB%BAOneIndex%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%9B%98/image-20240509212454174.png" alt="image-20240509212454174"></p>
+<p><img src="/local_pic/D/2024-05-09-搭建OneIndex个人网盘/image-20240509212454174.png" alt="image-20240509212454174"></p>
 <p><strong>最后我们需要初始化网盘，点击页面缓存，选择重建所有缓存。</strong></p>
 <hr>
 <p><strong>完结撒花</strong></p>
@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-
     <style></style><script data-pjax>
     function butterfly_categories_card_injector_config(){
       var parent_div_git = document.getElementById('recent-posts');
-      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 380px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 320px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(/local_pic/B/1.webp);"> <a class="categoryBar-list-link" href="categories/数据结构与算法/">数据结构与算法</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">数据结构与算法源码与分析</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/2.webp);"> <a class="categoryBar-list-link" href="categories/Java爬虫/">Java爬虫</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Java爬虫开发</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/3.webp);"> <a class="categoryBar-list-link" href="categories/Qt-C/">Qt C++</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Java SpringBoot后端开发</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/4.webp);"> <a class="categoryBar-list-link" href="categories/SpringBoot/">SpringBoot</a><span class="categoryBar-list-count">5</span><span class="categoryBar-list-descr">Qt C++桌面应用开发</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/5.webp);"> <a class="categoryBar-list-link" href="categories/UniApp/">UniApp</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">UniApp移动端开发</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/6.webp);"> <a class="categoryBar-list-link" href="categories/VUE/">VUE</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr">VUE网页前端开发</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/7.webp);"> <a class="categoryBar-list-link" href="categories/Hexo/">Hexo</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Hexo博客搭建</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/8.webp);"> <a class="categoryBar-list-link" href="categories/Fisco区块链/">Fisco区块链</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">Fisco区块链</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/9.webp);"> <a class="categoryBar-list-link" href="categories/Windows/">Windows</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr">Windows</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/10.webp);"> <a class="categoryBar-list-link" href="categories/Python深度学习/">Python深度学习</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Python深度学习</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/11.jpg);"> <a class="categoryBar-list-link" href="categories/网站搭建/">网站搭建</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr">网站搭建</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/12.jpg);"> <a class="categoryBar-list-link" href="categories/Linux/">Linux</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">Linux</span></li></ul></div></div>';
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 380px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 320px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(/local_pic/B/1.webp);"> <a class="categoryBar-list-link" href="categories/Java爬虫/">Java爬虫</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">数据结构与算法源码与分析</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/2.webp);"> <a class="categoryBar-list-link" href="categories/数据结构与算法/">数据结构与算法</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Java爬虫开发</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/3.webp);"> <a class="categoryBar-list-link" href="categories/Qt-C/">Qt C++</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Java SpringBoot后端开发</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/4.webp);"> <a class="categoryBar-list-link" href="categories/SpringBoot/">SpringBoot</a><span class="categoryBar-list-count">5</span><span class="categoryBar-list-descr">Qt C++桌面应用开发</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/5.webp);"> <a class="categoryBar-list-link" href="categories/UniApp/">UniApp</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">UniApp移动端开发</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/6.webp);"> <a class="categoryBar-list-link" href="categories/VUE/">VUE</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr">VUE网页前端开发</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/7.webp);"> <a class="categoryBar-list-link" href="categories/Hexo/">Hexo</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Hexo博客搭建</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/8.webp);"> <a class="categoryBar-list-link" href="categories/Fisco区块链/">Fisco区块链</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">Fisco区块链</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/9.webp);"> <a class="categoryBar-list-link" href="categories/Windows/">Windows</a><span class="categoryBar-list-count">3</span><span class="categoryBar-list-descr">Windows</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/10.webp);"> <a class="categoryBar-list-link" href="categories/Python深度学习/">Python深度学习</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Python深度学习</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/11.jpg);"> <a class="categoryBar-list-link" href="categories/网站搭建/">网站搭建</a><span class="categoryBar-list-count">4</span><span class="categoryBar-list-descr">网站搭建</span></li><li class="categoryBar-list-item" style="background:url(/local_pic/B/12.jpg);"> <a class="categoryBar-list-link" href="categories/Linux/">Linux</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">Linux</span></li></ul></div></div>';
       console.log('已挂载butterfly_categories_card')
       parent_div_git.insertAdjacentHTML("afterbegin",item_html)
       }
